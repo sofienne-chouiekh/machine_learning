@@ -1,0 +1,233 @@
+<html>
+<head>
+<style>
+  :root {
+  --color-lightest: #f9fdfe;
+  --color-gray-light: #cdcfcf;
+  --color-gray-medium: #686a69;
+  --color-gray-dark: #414643;
+  --color-darkest: #2a2f2c;
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Heydon Pickering’s lobotomized owl. Details: https://bit.ly/1H7MXUD */
+* + * {
+  margin-top: 1rem;
+}
+
+/* Set up fonts, colors and all that jazz. */
+body {
+  background: var(--color-lightest);
+  color: var(--color-gray-medium);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+/* Headings use a different font because they’re hipsters. */
+h1,
+h2 {
+  color: var(--color-darkest);
+  font-size: 110%;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 125%;
+}
+
+/* Set up general layout rules for outer containers. */
+.contact-form,
+.results {
+  width: 90vw;
+  max-width: 550px;
+  margin: 8vh auto;
+}
+
+p {
+  margin-top: 0.5rem;
+  font-size: 87.5%;
+}
+
+.results pre {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: $color-lightest;
+  border: 1px solid var(--color-gray-light);
+  overflow-x: scroll;
+}
+
+.contact-form form {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 1rem 0 2rem;
+  border-top: 1px solid var(--color-gray-light);
+  border-bottom: 1px solid var(--color-gray-light);
+  overflow: hidden;
+}
+
+.input-group {
+  margin-top: 0.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.contact-form label {
+  display: block;
+  color: $color-gray-dark;
+  font-family: Lato, sans-serif;
+  font-size: 90%;
+  line-height: 1.125;
+}
+
+.group-label {
+  display: inline-block;
+  margin-right: 1rem;
+  font-size: 90%;
+}
+
+.contact-form label.inline {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  display: block;
+  margin-top: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $color-gray-light;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  transition: 150ms border-color linear;
+}
+
+.contact-form input[type=checkbox],
+.contact-form input[type=radio] {
+  display: inline-block;
+  width: auto;
+}
+
+.contact-form input[type=checkbox]:not(:first-of-type),
+.contact-form input[type=radio]:not(:first-of-type) {
+  margin-left: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form input:active {
+  border-color: var(--color-gray-medium);
+}
+
+.contact-form button {
+  display: block;
+  margin: 0.5rem 1rem 0;
+  padding: 0 1rem 0.125rem;
+  background-color: var(--color-gray-medium);
+  border: 0;
+  color: var(--color-lightest);
+  font-family: lato, sans-serif;
+  font-size: 100%;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  transition: 150ms all linear;
+}
+
+.contact-form button:hover,
+.contact-form button:active,
+.contact-form button:focus {
+  background: var(--color-darkest);
+  cursor: pointer;
+
+</style>
+  <title>Python</title>
+</head>
+<body>
+<section class="contact-form">
+  <h1>Predict</h1>
+  <p>Use this handy form to predict house price in Tunisia </p>
+
+  <form action="/predict" method="POST">
+
+
+    <div class="input-group">
+      <label for="local">Adresse postal</label>
+       <select name="local" id="local">
+              <option value="">--Please choose Place--</option>
+              <option value="2090">Morneg</option>
+              <option value="4054">Sahloul</option>
+              <option value="4023">Riadh</option>
+              <option value="4000">Sousse Ville</option>
+              <option value="4042">Chatt Meriam</option>
+              <option value="4051">Khezama</option>
+              <option value="4004">Sousse</option>
+              <option value="4089">Kantaoui</option>
+              <option value="4012">Hergla</option>
+              <option value="2083">Ennasr</option>
+              <option value="4216">Aouina</option>
+              <option value="2036">Soukra</option>
+              <option value="1100">Zaghouan</option>
+              <option value="2092">Manar</option>
+              <option value="2091">Menzah</option>
+              <option value="2060">Goulette</option>
+              <option value="2080">Ariana</option>
+              <option value="1053">Lac</option>
+              <option value="1057">Gammarth</option>
+              <option value="2043">Ezzahra</option>
+              <option value="2016">Carthage</option>
+              <option value="2014">MÃ©grine</option>
+              <option value="2070">Marsa</option>
+              <option value="2015">Kram</option>
+              <option value="2097">El-bassatine</option>
+              <option value="2084">CÃ©dria</option>
+              <option value="2010">Manouba</option>
+              <option value="2000">Bardo</option>
+              <option value="1082">Urbain Nord</option>
+              <option value="2063">Madina Jedida</option>
+              <option value="2074">Mourouj</option>
+              <option value="1082">Mutuelleville</option>
+              <option value="2040">RadÃ©s</option>
+              <option value="1000">Tunis Ville</option>
+              <option value="8050">Hammamet</option>
+              <option value="8000">Nabeul</option>
+              <option value="5000">Monastir</option>
+              <option value="5100">Mahdia</option>
+          </select>
+    </div>
+
+    <div class="input-group">
+      <label for="type">Type</label>
+      <select name="type" id="type">
+              <option value="">--Please choose Type--</option>
+              <option value="0">Maison</option>
+              <option value="1">Appartement</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+     <label for="surface">Surface</label>
+      <input id="surface" name="surface" type=number />
+    </div>
+
+    <div class="input-group">
+      <label for="nbpiece">S+</label>
+      <input id="nbpiece" name="nbpiece" type=number
+    </div>
+
+    <button type="submit" class= "file_submit">Predict</button>
+  </form>
+{% if prix %}
+  <h3>Prix  = {{prix}} TND</h3>
+{% endif %}
+</section>
+</body>
+</html>

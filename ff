@@ -1,0 +1,8 @@
+import cgi
+
+form = cgi.FieldStorage()
+local =  form.getvalue("local")
+type = form.getvalue("type")
+surface = form.getvalue("surface")
+nbpiece = form.getvalue("nbpiece")
+print(local,type,surface,nbpiece)
